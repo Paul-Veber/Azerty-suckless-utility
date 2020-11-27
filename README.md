@@ -1,159 +1,104 @@
 # Azerty-suckless-utility
 A fork of distrotube dwm utility (DWM, st, dmenu, dwmblocks) with AZERTY shortcuts. More to come...
 
-Keybindings For DWM
+## Keybindings For DWM
 
-//base shortcuts
+the super key [s] is the windows key 
 
-[s]+d           dmenu
-[s]+return      terminal
-[alt]+return    tabbed
-[s]+b           toggle statut bar
-[s]+[shift]+j   rotate stack
-[s]+[shift]+k   rotate stack
-[s]+j           focuss stack
-[s]+K           focuss stack
-[s]+h           reduce master
-[s]+l           increase master
-[s]+[space]     choose master stack
-[s]+q           close windows
+### Base shortcuts
 
-//layouts
-[s]+[tab]       circle through layout
-[s]+t           tile []=
-[s]+f           floating ><>
-[s]+m           monocle  [M]
-[s]+g           grid HHH
++ [s]+d           dmenu
++ [s]+return      terminal
++ [alt]+return    tabbed
++ [s]+b           toggle statut bar
++ [s]+[shift]+j   rotate stack
++ [s]+[shift]+k   rotate stack
++ [s]+j           focuss stack
++ [s]+K           focuss stack
++ [s]+h           reduce master
++ [s]+l           increase master
++ [s]+[space]     choose master stack
++ [s]+q           close windows
 
-//desktop 
-[s]+{1-9}       go to specific desktopKeybindings For DWM
+### Layouts
 
-//base shortcuts
++ [s]+[tab]       circle through layout
++ [s]+t           tile []=
++ [s]+f           floating ><>
++ [s]+m           monocle  [M]
++ [s]+g           grid HHH
 
-[s]+d           dmenu
-[s]+return      terminal
-[alt]+return    tabbed
-[s]+b           toggle statut bar
-[s]+[shift]+j   rotate stack
-[s]+[shift]+k   rotate stack
-[s]+j           focuss stack
-[s]+K           focuss stack
-[s]+h           reduce master
-[s]+l           increase master
-[s]+[space]     choose master stack
-[s]+q           close windows
+### Desktop 
++ [s]+{1-9}       go to specific desktop
++ [s]+0           switch betwenn desktop
 
-//layouts
-[s]+[tab]       circle through layout
-[s]+t           tile []=
-[s]+f           floating ><>
-[s]+m           monocle  [M]
-[s]+g           grid HHH
+### Switching between monitors
 
-//desktop 
-[s]+{1-9}       go to specific desktop
-[s]+0           switch betwenn desktop
++ [s]+,           switching monitors
++ [s]+;           switching monitors
++ [s]+[shift]+,   send window to monitors
++ [s]+[shift]+;   send window to monitors
 
-//switching between monitors
+### Apps
 
-[s]+,           switching monitors
-[s]+;           switching monitors
-[s]+[shift]+,   send window to monitors
-[s]+[shift]+;   send window to monitors
++ [s]+w           browser
++ [s]+r           file manager (thunar)
++ [s]+e           vscodium
++ [s]+F1          pamac-manager
++ [s]+F2          pulsemix
++ [s]+F3          nvidia-settingsKeybindings For DWM
 
-//app
+### Base shortcuts
 
-[s]+w           browser
-[s]+r           file manager (thunar)
-[s]+e           vscodium
-[s]+F1          pamac-manager
-[s]+F2          pulsemix
-[s]+F3          nvidia-settings
-[s]+F4          lutris
-[s]+F5          steam
-[print]         take screenshot
-[shift]+[print] screenshot Options
-[ctrl]+[escape] task mananger
-[s]+[alt]+g     gtop
++ [s]+d           dmenu
++ [s]+return      terminal
++ [alt]+return    tabbed
++ [s]+b           toggle statut bar
++[s]+[shift]+j   rotate stack
++ [s]+[shift]+k   rotate stack
++ [s]+j           focuss stack
++ [s]+K           focuss stack
++ [s]+h           reduce master
++ [s]+l           increase master
++ [s]+[space]     choose master stack
++ [s]+q           close windows
 
-//Session
-[s]+[shift]+q   exit Session
-[s]+[shift]+r   restart DWMKeybindings For DWM
+### Layouts
 
-//base shortcuts
++ [s]+[tab]       circle through layout
++ [s]+t           tile []=
++ [s]+f           floating ><>
++ [s]+m           monocle  [M]
++ [s]+g           grid HHH
 
-[s]+d           dmenu
-[s]+return      terminal
-[alt]+return    tabbed
-[s]+b           toggle statut bar
-[s]+[shift]+j   rotate stack
-[s]+[shift]+k   rotate stack
-[s]+j           focuss stack
-[s]+K           focuss stack
-[s]+h           reduce master
-[s]+l           increase master
-[s]+[space]     choose master stack
-[s]+q           close windows
+### Desktop 
 
-//layouts
-[s]+[tab]       circle through layout
-[s]+t           tile []=
-[s]+f           floating ><>
-[s]+m           monocle  [M]
-[s]+g           grid HHH
++ [s]+{1-9}       go to specific desktop
++ [s]+0           switch betwenn desktop
 
-//desktop 
-[s]+{1-9}       go to specific desktop
-[s]+0           switch betwenn desktop
+### Switching between monitors
 
-//switching between monitors
++ [s]+,           switching monitors
++ [s]+;           switching monitors
++ [s]+[shift]+,   send window to monitors
++ [s]+[shift]+;   send window to monitors
 
-[s]+,           switching monitors
-[s]+;           switching monitors
-[s]+[shift]+,   send window to monitors
-[s]+[shift]+;   send window to monitors
+### Apps
 
-//app
++ [s]+w           browser
++ [s]+r           file manager (thunar)
++ [s]+e           vscodium
++ [s]+F1          pamac-manager
++ [s]+F2          pulsemix
++ [s]+F3          nvidia-settings
++ [s]+F4          lutris
++ [s]+F5          steam
++ [print]         take screenshot
++ [shift]+[print] screenshot Options
++ [ctrl]+[escape] task mananger
++ [s]+[alt]+g     gtop
 
-[s]+w           browser
-[s]+r           file manager (thunar)
-[s]+e           vscodium
-[s]+F1          pamac-manager
-[s]+F2          pulsemix
-[s]+F3          nvidia-settings
-[s]+F4          lutris
-[s]+F5          steam
-[print]         take screenshot
-[shift]+[print] screenshot Options
-[ctrl]+[escape] task mananger
-[s]+[alt]+g     gtop
+### Session
 
-//Session
-[s]+[shift]+q   exit Session
-[s]+[shift]+r   restart DWM
-
-//switching between monitors
-
-[s]+,           switching monitors
-[s]+;           switching monitors
-[s]+[shift]+,   send window to monitors
-[s]+[shift]+;   send window to monitors
-
-//app
-
-[s]+w           browser
-[s]+r           file manager (thunar)
-[s]+e           vscodium
-[s]+F1          pamac-manager
-[s]+F2          pulsemix
-[s]+F3          nvidia-settings
-[s]+F4          lutris
-[s]+F5          steam
-[print]         take screenshot
-[shift]+[print] screenshot Options
-[ctrl]+[escape] task mananger
-[s]+[alt]+g     gtop
-
-//Session
-[s]+[shift]+q   exit Session
-[s]+[shift]+r   restart DWM
++ [s]+[shift]+q   exit Session
++ [s]+[shift]+r   restart DWM
