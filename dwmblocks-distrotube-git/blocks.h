@@ -9,7 +9,7 @@ static const Block blocks[] = {
 	
 	{" 💻 ", "/opt/dwmblocks-distrotube-git/scripts/memory",	        6,		            1},
 
-	{" 🔊 ", "/opt/dwmblocks-distrotube-git/scripts/volume",			2,		            10},
+	{"", "/opt/dwmblocks-distrotube-git/scripts/volume",			2,		            10},
 
 	{" 🕑 ", "/opt/dwmblocks-distrotube-git/scripts/clock",			5,		            0},
 };

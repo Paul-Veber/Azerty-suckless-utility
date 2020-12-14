@@ -41,8 +41,8 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; 
-/*static const char *tags[] = { "", "", "", "", "", "", "", "", "" };*/
+/*static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };*/ 
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 
 static const Rule rules[] = {
@@ -85,9 +85,9 @@ static const Layout layouts[] = {
 /* dmenu */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* If you are using the standard dmenu program, use the following. */
-static const char *dmenucmd[]    = { "dmenu_run", "-p", "Run: ", NULL };
+/*static const char *dmenucmd[]    = { "dmenu_run", "-p", "Run: ", NULL };*/
 /* If you are using the dmenu-distrotube-git program, use the following for a cooler dmenu! */
-/* static const char *dmenucmd[]    = { "dmenu_run", "-g", "10", "-l", "48", "-p", "Run: ", NULL }; */
+static const char *dmenucmd[]    = { "dmenu_run", "-g", "10", "-l", "48", "-p", "Run: ", NULL };
 
 /* the st terminal with tabbed */
 static const char *termcmd[]     = { "st", NULL };
@@ -95,11 +95,16 @@ static const char *termcmd[]     = { "st", NULL };
 /* static const char *termcmd[]     = { "st", "-e fish", NULL }; */
 static const char *tabtermcmd[]  = { "tabbed", "-r", "2", "st", "-w", "''", NULL };
 
+/* patch */
+
+#include "shiftview.c"
+
 static Key keys[] = {
 	/* modifier             key        function        argument */
-	{ MODKEY,     			XK_d, 	   spawn,          {.v = dmenucmd } },
-	{ MODKEY,               XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ControlMask,   XK_d, 	   spawn,          {.v = dmenucmd } },
+	{ MODKEY,               XK_d, 	   spawn,          CMD("dmenu_run -c -l 20") },
 	{ Mod1Mask,             XK_Return, spawn,          {.v = tabtermcmd } },
+    { MODKEY,               XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,               XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,     XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,     XK_k,      rotatestack,    {.i = -1 } },
@@ -108,12 +113,16 @@ static Key keys[] = {
 	{ MODKEY,               XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,               XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,			    XK_space,  zoom,           {0} },
-	{ MODKEY,               XK_Tab,    view,           {0} },
+	/*{ MODKEY,               XK_Tab,    view,           {0} },*/
 	{ MODKEY,     			XK_q,      killclient,     {0} },
+    /*{ MODKEY,               XK_parenright,  setgaps,   {.i = -1 } },
+    { MODKEY,               XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY|ShiftMask,     XK_equal,  setgaps,        {.i = 0  } },*/
 
     /* Layout manipulation */
-	{ MODKEY,               XK_Tab,    cyclelayout,    {.i = -1 } },
-	{ MODKEY|ShiftMask,     XK_Tab,    cyclelayout,    {.i = +1 } },
+	{ MODKEY,               XK_Tab,    shiftview,    {.i = +1 } },
+    { MODKEY|ShiftMask,     XK_Tab,    shiftview,    {.i = -1 } },
+	{ MODKEY|ControlMask,   XK_Tab,    cyclelayout,  {.i = +1 } },
 	/*{ MODKEY,               XK_space,  setlayout,      {0} },*/
 	{ MODKEY|ShiftMask,     XK_space,  togglefloating, {0} },
 
@@ -125,7 +134,8 @@ static Key keys[] = {
 
 	/* desktops */
 	{ MODKEY,               XK_agrave,      view,      {.ui = ~0 } },
-	{ MODKEY|ShiftMask,     XK_agrave,      view, 	   {0} },
+	/*{ MODKEY,               XK_Tab,         view, 	   {.ui = +1 } },*/
+
 
 	TAGKEYS(                XK_ampersand,              0)
 	TAGKEYS(                XK_eacute,                 1)
@@ -145,13 +155,15 @@ static Key keys[] = {
 
 	/* app launcher */
 	{ MODKEY, 				XK_w,		  spawn,	   CMD("firefox") },
-	{ MODKEY,				XK_r,		  spawn,	   CMD("st -e nnn") },
+    { MODKEY|ShiftMask, 	XK_w,		  spawn,	   CMD("firefox-developer-edition") },
+	{ MODKEY,				XK_r,		  spawn,	   CMD("spacefm") },
 	{ MODKEY,				XK_e,		  spawn,	   CMD("codium") },
 	{ MODKEY,				XK_F1,		  spawn,	   CMD("pamac-manager") },
 	{ MODKEY,				XK_F2,		  spawn,	   CMD("st -e pulsemixer") },
-	{ MODKEY,				XK_F3,		  spawn,	   CMD("nvidia-settings") },
+	{ MODKEY,				XK_F3,		  spawn,	   CMD("discord") },
 	{ MODKEY,				XK_F4,		  spawn,	   CMD("lutris") },
 	{ MODKEY,				XK_F5,		  spawn,	   CMD("steam") },
+    { MODKEY,				XK_F6,		  spawn,	   CMD("st -e calcurse") },
 	{ 0,				    XK_Print,	  spawn,	   CMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
 	{ ShiftMask,			XK_Print,	  spawn,	   CMD("bash /home/paul/.local/bin/maimpick") },
 	{ ControlMask,			XK_Escape,	  spawn,	   CMD("xfce4-taskmanager") },
@@ -160,7 +172,7 @@ static Key keys[] = {
     /* Apps Launched with SUPER + ALT + KEY */
 	{ MODKEY|Mod1Mask,        XK_b,    spawn,          CMD("tabbed -r 2 surf -pe x '.surf/html/homepage.html'") },
 	{ MODKEY|Mod1Mask,        XK_c,    spawn,          CMD("st -e cmus") },
-	{ MODKEY|Mod1Mask,        XK_f,    spawn,          CMD("st -e vifm") },
+	{ MODKEY|Mod1Mask,        XK_f,    spawn,          CMD("st -e vim") },
 	{ MODKEY|Mod1Mask,        XK_g,    spawn,          CMD("st -e gtop") },
 	{ MODKEY|Mod1Mask,        XK_i,    spawn,          CMD("st -e irssi") },
 	{ MODKEY|Mod1Mask,        XK_n,    spawn,          CMD("st -e newsboat") },

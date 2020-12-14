@@ -7,7 +7,6 @@ function run {
   fi
 }
 
-run "pamac-tray"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 run "synergy"
 

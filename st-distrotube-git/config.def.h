@@ -109,24 +109,24 @@ float alpha = 0.95;
 /* Colorscheme based on the 'Doom One' theme from Doom Emacs */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#1c1f24",
-	"#ff6c6b",
-	"#98be65",
-	"#da8548",
-	"#51afef",
-	"#c678dd",
-	"#5699af",
-	"#202328",
+	"#3b3228",
+	"#cb6077",
+	"#beb55b",
+	"#f4bc87",
+	"#8ab3b5",
+	"#a89bb9",
+	"#7bbda4",
+    "#d0c8c6"
 
 	/* 8 bright colors */
-	"#5b6268",
-	"#da8548",
-	"#4db5bd",
-	"#ecbe7b",
-	"#3071db",
-	"#a9a1e1",
-	"#46d9ff",
-	"#dfdfdf",
+	"#7e705a",
+	"#cb6077",
+	"#beb55b",
+	"#f4bc87",
+	"#8ab3b5",
+	"#a89bb9",
+	"#7bbda4",
+	"#f5eeeb",
 
 	[255] = 0,
 

@@ -38,4 +38,4 @@ static unsigned int columns    = 0;
 static const char worddelimiters[] = " ";
 
 /* Size of the window border */
-static unsigned int border_width = 0;  /* -bw option; to add border width */
+static unsigned int border_width = 3;  /* -bw option; to add border width */

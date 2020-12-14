@@ -103,37 +103,37 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.7;
+float alpha = 0.50;
 
 /* Terminal colors (16 first used in escape sequence) */
 /* Colorscheme based on the 'Doom One' theme from Doom Emacs */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#1c1f24",
-	"#ff6c6b",
-	"#98be65",
-	"#da8548",
-	"#51afef",
-	"#c678dd",
-	"#5699af",
-	"#202328",
+	"#3b3228",
+	"#cb6077",
+	"#beb55b",
+	"#f4bc87",
+	"#8ab3b5",
+	"#a89bb9",
+	"#7bbda4",
+    "#d0c8c6",
 
 	/* 8 bright colors */
-	"#5b6268",
-	"#da8548",
-	"#4db5bd",
-	"#ecbe7b",
-	"#3071db",
-	"#a9a1e1",
-	"#46d9ff",
-	"#dfdfdf",
+	"#7e705a",
+	"#cb6077",
+	"#beb55b",
+	"#f4bc87",
+	"#8ab3b5",
+	"#a89bb9",
+	"#7bbda4",
+	"#f5eeeb",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#282c34",
-	"#bbc2cf",
-	"#d7d7d7",
+	"#150707",
+	"#ffc6b7",
+	"#ffc6b7",
 };
 
 
