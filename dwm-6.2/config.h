@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx    = 6;   /* pixel gap between clients */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -16,11 +16,11 @@ static const Bool viewontag         = True;     /* Switch view on tag switch */
  * Arch repos and is listed as a dependency for this build. JoyPixels is also
  * a hard dependency and makes colored fonts and emojis possible.
  */
-static const char *fonts[]     = {"Mononoki Nerd Font:size=12:antialias=true:autohint=true",
+static const char *fonts[]     = {"Cascadia Code:size=12:antialias=true:autohint=true",
                                   "Hack:size=8:antialias=true:autohint=true",
-                                  "JoyPixels:size=10:antialias=true:autohint=true"
+                                  "Font Awesome 5 Free:size=10:antialias=true:autohint=true"
 						     	};
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "Cascadia Code:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -46,9 +46,9 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
