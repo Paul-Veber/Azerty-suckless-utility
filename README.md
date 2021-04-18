@@ -1,6 +1,18 @@
 # Azerty-suckless-utility
 A fork of distrotube dwm utility (DWM, st, dmenu, dwmblocks) with AZERTY shortcuts. More to come...
 
+## dwm patch liste
+
++ alwayscenter
++ attachaside
++ autostart
++ pertag
++ rotatestack
++ systray
++ uselessgap
++ viewmontag
++ warp
+
 ## Keybindings For DWM
 
 the super key [s] is the windows key 
@@ -26,7 +38,7 @@ the super key [s] is the windows key
 + [s]+t           tile []=
 + [s]+f           floating ><>
 + [s]+m           monocle  [M]
-+ [s]+g           grid HHH
+
 
 ### Desktop 
 + [s]+{1-9}       go to specific desktop
@@ -52,9 +64,8 @@ the super key [s] is the windows key
 
 + [s]+d           dmenu
 + [s]+return      terminal
-+ [alt]+return    tabbed
 + [s]+b           toggle statut bar
-+[s]+[shift]+j   rotate stack
++[s]+[shift]+j    rotate stack
 + [s]+[shift]+k   rotate stack
 + [s]+j           focuss stack
 + [s]+K           focuss stack
@@ -65,11 +76,10 @@ the super key [s] is the windows key
 
 ### Layouts
 
-+ [s]+[tab]       circle through layout
 + [s]+t           tile []=
 + [s]+f           floating ><>
 + [s]+m           monocle  [M]
-+ [s]+g           grid HHH
+
 
 ### Desktop 
 
