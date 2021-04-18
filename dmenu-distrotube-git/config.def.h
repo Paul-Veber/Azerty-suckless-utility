@@ -19,11 +19,14 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#cccccc", "#282a36" },
-	[SchemeSel] = { "#ffffff", "#924441" },
+	/* [SchemeNorm] = { "#cccccc", "#282a36" },
+	[SchemeSel] = { "#ffffff", "#924441" }, */
+    [SchemeNorm] = { "#bbbbbb", "#222222" },
+	[SchemeSel] = { "#eeeeee", "#005577" },
 	[SchemeSelHighlight] = { "#d7d7d7", "#000000" },
 	[SchemeNormHighlight] = { "#e78481", "#000000" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+    [SchemeOut] = { "#000000", "#00ffff" },
+	/* [SchemeOut] = { "#000000", "#00ffff" }, */
 	[SchemeMid] = { "#d7d7d7", "#1f2026" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */

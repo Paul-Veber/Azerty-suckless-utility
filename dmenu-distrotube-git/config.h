@@ -16,14 +16,17 @@ static const char *fonts[] = {
 	"Fira Code:pixelsize=11:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=8:antialias=true:autohint=true"
 };
-static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+static const char *prompt      = "Run:";      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#cccccc", "#282a36" },
-	[SchemeSel] = { "#ffffff", "#924441" },
-	[SchemeSelHighlight] = { "#d7d7d7", "#000000" },
-	[SchemeNormHighlight] = { "#e78481", "#000000" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	/* [SchemeNorm] = { "#cccccc", "#282a36" },
+	[SchemeSel] = { "#ffffff", "#924441" }, */
+    [SchemeNorm] = { "#f8f8f2", "#282a36" },
+	[SchemeSel] = { "#1f2026", "#bd93f9" },
+	[SchemeSelHighlight] = { "#1f2026", "#ff5555" },
+	[SchemeNormHighlight] = { "#1f2026", "#ff79c6" },
+    [SchemeOut] = { "#000000", "#00ffff" },
+	/* [SchemeOut] = { "#000000", "#00ffff" }, */
 	[SchemeMid] = { "#d7d7d7", "#1f2026" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
